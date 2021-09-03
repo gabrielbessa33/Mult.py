@@ -1,7 +1,16 @@
-linguagem : python
-python :
-  - " 3,8 "
-instalar :
-  - pip install -r requisitos.txt
-script :
-  - py.test -v -rf --cov =. --cov-report = html
+{
+  "language": "python",
+  "os": [
+    "linux"
+  ],
+  "dist": "xenial",
+  "python": [
+    " 3,8 "
+  ],
+  "script": [
+    "py.test -v -rf --cov =. --cov-report = html"
+  ],
+  "install": [
+    "pip install -r requisitos.txt"
+  ]
+}
