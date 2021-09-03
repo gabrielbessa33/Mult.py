@@ -1,0 +1,7 @@
+linguagem : python
+python :
+  - " 3,8 "
+instalar :
+  - pip install -r requisitos.txt
+script :
+  - py.test -v -rf --cov =. --cov-report = html
