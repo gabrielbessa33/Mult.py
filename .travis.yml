@@ -1,16 +1,11 @@
-{
-  "language": "python",
-  "os": [
-    "linux"
-  ],
-  "dist": "xenial",
-  "python": [
-    " 3,8 "
-  ],
-  "script": [
-    "py.test -v -rf --cov =. --cov-report = html"
-  ],
-  "install": [
-    "pip install -r requisitos.txt"
-  ]
-}
+language: python
+python:
+  - "3.6"
+install: 
+  - pip install -r requirements.txt
+  - pip install coveralls
+script: 
+  - py.test -v -r f --cov=.  --cov-report=html
+  #- coverage run --source=home manage.py test home
+after_success:
+  - coveralls
